@@ -1,0 +1,96 @@
+.topBarContainer{
+    display: flex;
+    background-color:green;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 999;
+}
+.navBarTitle {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: 24px;
+    margin-left: 20px;
+}
+.link{
+    text-decoration: none;
+    color:white;
+}
+
+.left-containetr{
+    display: flex;
+    flex:3;
+    align-items: center;
+}
+.left-logo{
+    padding: 5px 0 0 10px;
+}
+.text-input{
+    border-style: none;
+    display: flex;
+    flex:2;
+    border-radius: 50%;
+    height: 28px;
+    margin-right: 20px; 
+}
+.text-input:focus{
+    outline:none;
+}
+/* .text-input{
+    /* width: 80%;
+    border-radius: 10px;
+     */
+    
+.middle-container{
+    display: flex;
+    flex:1;
+    align-items: center;
+    background-color: white;
+    height:32px;
+    width: 30%;
+    margin-top: 12px;
+    border-radius: 5px;
+    color: black;
+
+}
+.right-link{
+    display: flex;
+   
+    
+}
+.searchlink{
+
+}
+.right-text {
+    padding: 1px 0 0 10px;
+}
+.right-container{
+    display: flex;
+    flex:4;
+    align-items: center;
+    margin-left: 125px;
+   
+    
+}
+.right-icons {
+    margin-left: 40px;
+    margin-top:  15px;
+    
+   
+}
+.chat-icons{
+    margin-left: 5px;
+    color: crimson;
+}
+.navbarImg{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-left: 30px;
+    
+    /* margin:auto 10px auto 10px; */
+}

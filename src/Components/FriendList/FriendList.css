@@ -1,0 +1,10 @@
+.contacts{
+    display: flex;
+    flex-direction: column;
+}
+.sidebarTexts{
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 15px;
+    margin-left: -10px;
+}

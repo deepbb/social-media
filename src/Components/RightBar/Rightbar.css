@@ -1,0 +1,107 @@
+.rightbar {
+    flex:3.5;
+    margin: 60px auto auto 10px;
+    overflow-y: scroll;
+}
+.rightbarContainer {
+    display: flex;
+    align-items: center;
+}
+.rightBarImg {
+    width: 50px;
+    height: 50px;
+}
+.adimg {
+    width: 80%;
+    max-height: 250px;
+    margin:15px auto auto 15px;
+    border-radius: 10px;
+}
+.rightbarFriendImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.friendlist{
+    list-style: none;
+}
+.rightbarTitle {
+    margin-left: 5px;
+}
+.imgContainer {
+    display: flex;
+    align-items:center;
+    padding: 10px;
+}
+.friendName{
+    margin-left: 5px;
+    font-size: 15px;
+    font-weight: 700;
+}
+.rightbarOnline {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:green;
+    margin-left: auto;
+}
+.useerTitle {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+.userProfile {
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.HomeCity {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 5px;
+    padding: 10px;
+}
+.currentCity {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 5px;
+    padding: 10px;
+}
+.relationship {
+    font-size: 15px;
+    font-weight: bolder;
+    margin-right: 5px;
+    padding: 10px;
+}
+.imgPerson{
+    width: 80px;
+    height: 100px;
+    border-radius: 10px;
+}
+.followers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+.Followings {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.followButton {
+    background-color: green;
+    margin-left: 20px;
+    margin-top: 6px;
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    border-style: none;
+    font-weight:600;
+    width: 100px;
+    cursor: pointer;
+}
+.followButton:focus{
+    outline: none;
+}

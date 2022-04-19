@@ -1,0 +1,52 @@
+.container{
+    flex: 3;
+    background-color:azure;
+}
+.text-input{
+    border-style: none;
+    display: flex;
+    flex:2;
+    border-radius: 10%;
+    height: 28px;
+    margin-right: 20px; 
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.searchlogo{
+    position: absolute;
+    margin-left: 170px;
+    margin-top:-20px;
+}
+.profPic{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+.usertitle{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-size: 20px;
+    color: purple;
+    font-weight: 500;
+}
+.userWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.userBtn{
+    background-color: purple;
+    color: white;
+    border-style: none;
+    height: 25px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+}
