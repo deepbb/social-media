@@ -7,13 +7,13 @@ import Allposts from "../AllPosts/Allposts";
 import URL from "../../../url"
 
 function Allfeeds() {
-    const [posts,setPosts] = useState([])
+    // const [posts,setPosts] = useState([])
 
     useEffect(()=> {
         const getAllPosts = async()=> {
-            const res = await axios.get( URL +  "/post/")
-            console.log(res.data);
-            setPosts(res.data)
+            // const res = await axios.get( URL +  "/post/")
+            // console.log(res.data);
+            // setPosts(res.data)
         }
         getAllPosts()
     },[])
@@ -21,9 +21,9 @@ function Allfeeds() {
 
   return (
     <div className="allFeeds">
-   {posts.map((post,index)=> (
+   {/* {posts.map((post,index)=> (
      <Allposts key={index} post={post} />
-   ))}
+   ))} */}
     </div>
   )
 }
