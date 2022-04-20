@@ -26,7 +26,7 @@ function Home({username}) {
             {/* <Navbar /> */}
          <div className="body-container">
          <Sidebar />
-        <Feed username={username} />
+        {/* <Feed username={username} /> */}
          {/* {posts.map((post,index)=> (
                 <Post key={index} post={post} />
 
