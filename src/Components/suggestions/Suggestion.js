@@ -3,6 +3,7 @@ import axios from "axios";
 import "./suggestion.css";
 import SearchIcon from '@mui/icons-material/Search';
 import { useHistory } from 'react-router-dom';
+import {URL} from "../../url"
 
 
 function Suggestion() {
@@ -10,12 +11,12 @@ function Suggestion() {
   const [search,setSearch] = useState("")
   const router = useHistory()
 
-  const filteredUser = users.filter(user => {
-    return (
-      user.username.toLowerCase().includes(search.toLowerCase())
-    )
-  })
-  console.log(filteredUser);
+  // const filteredUser = users.filter(user => {
+  //   return (
+  //     user.username.toLowerCase().includes(search.toLowerCase())
+  //   )
+  // })
+  // console.log(filteredUser);
 
   const handleChange = (e)=> {
     setSearch(e.target.value)
@@ -23,7 +24,7 @@ function Suggestion() {
 
   useEffect(()=> {
     const getAllUsers = async()=> {
-      const res = await axios.get("/user/users")
+      const res = await axios.get( URL +"/user/users")
       console.log(res.data);
       setUsers(res.data)
     }
@@ -46,7 +47,7 @@ function Suggestion() {
     <div className='usertitle'>
       <span>Suggestions for you</span>
     </div>
-    {filteredUser && 
+    {/* {filteredUser && 
     filteredUser.map((user,index)=> (
       <div key={index} className='userWrapper'>
       <>
@@ -55,7 +56,7 @@ function Suggestion() {
       </>  
       </div>
     ))
-    }
+    } */}
     </div>
   )
 }

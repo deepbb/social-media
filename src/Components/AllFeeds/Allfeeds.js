@@ -4,6 +4,7 @@ import axios from "axios";
 import Post from "../post/Post";
 import { AuthContext } from "../../Context/AuthContext";
 import Allposts from "../AllPosts/Allposts";
+import { URL } from "../../url"
 
 function Allfeeds() {
     const [posts,setPosts] = useState([])
@@ -20,9 +21,9 @@ function Allfeeds() {
 
   return (
     <div className="allFeeds">
-   {posts.map((post,index)=> (
+   {/* {posts.map((post,index)=> (
      <Allposts key={index} post={post} />
-   ))}
+   ))} */}
     </div>
   )
 }

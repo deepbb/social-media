@@ -8,26 +8,27 @@ import Post from "../../Components/post/Post"
 import axios from "axios";
 import Suggestion from "../../Components/suggestions/Suggestion"
 import Allfeeds from "../../Components/AllFeeds/Allfeeds"
+import { URL } from "../../url"
 
 function Home({username}) {
-   // const [posts,setPost] = useState([])
+//    const [posts,setPost] = useState([])
 
-    // useEffect(()=> {
-    //     const fetchPosts = async ()=> {
-    //         const res = await axios.get("/post")
-    //         console.log(res);
-    //         setPost(res.data)
-    //     }
-    //     fetchPosts()
-    // },[])
+//     useEffect(()=> {
+//         const fetchPosts = async ()=> {
+//             const res = await axios.get( URL + "/post")
+//             console.log(res);
+//             setPost(res.data)
+//         }
+//         fetchPosts()
+//     },[])
 
     return (
         <div>
             {/* <Navbar /> */}
          <div className="body-container">
          <Sidebar />
-        {/* <Feed username={username} /> */}
-         {/* {posts.map((post,index)=> (
+         {/* <Feed username={username} /> 
+          {posts.map((post,index)=> (
                 <Post key={index} post={post} />
 
             ))} */}

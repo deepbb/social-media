@@ -1,1 +1,0 @@
-export const URL = process.env.REACT_URL

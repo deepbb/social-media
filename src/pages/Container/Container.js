@@ -11,7 +11,7 @@ function Container() {
     <div className="post-container">
     <Sidebar />
     {/* <Allfeeds /> */}
-    {/* <Suggestion /> */}
+    <Suggestion />
     </div>
   )
 }

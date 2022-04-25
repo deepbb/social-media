@@ -8,6 +8,7 @@ import { AuthContext } from "../../Context/AuthContext";
 import { Users } from "../../dummydata"
 import FriendList from "../FriendList/FriendList"
 import Me from "../../../src/swathi.jpg"
+import Allfeeds from "../AllFeeds/Allfeeds";
 
 function Feed( {username}) {
     const [posts,setPost] = useState([])
@@ -18,10 +19,7 @@ function Feed( {username}) {
             const res = username ? await axios.get("/post/profile/" + username)
             : await axios.get("/post/timeline/" + user._id)
             console.log(res);
-            setPost(res.data.sort((p1,p2) => {
-                return new Date(p2.createdAt) - new Date(p1.createdAt)
-
-            }))
+            setPost(res.data)
          }  
          fetchpost();
 
@@ -41,10 +39,13 @@ function Feed( {username}) {
 
         ))}
         </ul>
-            {user && posts.map((post,index)=> (
-                <Post key={index} post={post} />
+        
+            {posts ? posts.map((post,index)=> (
+                <Post key={index} post={post} />))
+                :
+                <Allfeeds />
 
-            ))} 
+            } 
 
         
 
