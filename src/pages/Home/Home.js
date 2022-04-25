@@ -11,27 +11,27 @@ import Allfeeds from "../../Components/AllFeeds/Allfeeds"
 import { URL } from "../../url"
 
 function Home({username}) {
-//    const [posts,setPost] = useState([])
+   const [posts,setPost] = useState([])
 
-//     useEffect(()=> {
-//         const fetchPosts = async ()=> {
-//             const res = await axios.get( URL + "/post")
-//             console.log(res);
-//             setPost(res.data)
-//         }
-//         fetchPosts()
-//     },[])
+    useEffect(()=> {
+        const fetchPosts = async ()=> {
+            const res = await axios.get( URL + "/post")
+            console.log(res);
+            setPost(res.data)
+        }
+        fetchPosts()
+    },[])
 
     return (
         <div>
             {/* <Navbar /> */}
          <div className="body-container">
          <Sidebar />
-         {/* <Feed username={username} /> 
+         <Feed username={username} /> 
           {posts.map((post,index)=> (
                 <Post key={index} post={post} />
 
-            ))} */}
+            ))}
             <Suggestion />
          </div>
         </div>

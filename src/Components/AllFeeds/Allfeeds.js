@@ -11,7 +11,7 @@ function Allfeeds() {
 
     useEffect(()=> {
         const getAllPosts = async()=> {
-            const res = await axios.get("/post/")
+            const res = await axios.get( URL +"/post/")
             console.log(res.data);
             setPosts(res.data)
         }
@@ -21,9 +21,9 @@ function Allfeeds() {
 
   return (
     <div className="allFeeds">
-   {/* {posts.map((post,index)=> (
+   {posts.map((post,index)=> (
      <Allposts key={index} post={post} />
-   ))} */}
+   ))}
     </div>
   )
 }

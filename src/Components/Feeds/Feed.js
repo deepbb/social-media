@@ -9,6 +9,7 @@ import { Users } from "../../dummydata"
 import FriendList from "../FriendList/FriendList"
 import Me from "../../../src/swathi.jpg"
 import Allfeeds from "../AllFeeds/Allfeeds";
+import { URL } from "../../url"
 
 function Feed( {username}) {
     const [posts,setPost] = useState([])
@@ -16,7 +17,7 @@ function Feed( {username}) {
 
     useEffect(()=> {
         const fetchpost = async ()=> {
-            const res = username ? await axios.get("/post/profile/" + username)
+            const res = username ? await axios.get( URL + "/post/profile/" + username)
             : await axios.get("/post/timeline/" + user._id)
             console.log(res);
             setPost(res.data)
