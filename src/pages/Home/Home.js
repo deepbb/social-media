@@ -15,7 +15,7 @@ function Home({username}) {
 
     useEffect(()=> {
         const fetchPosts = async ()=> {
-            const res = await axios.get( URL + "/post")
+            const res = await axios.get("/post")
             console.log(res);
             setPost(res.data)
         }
@@ -23,18 +23,11 @@ function Home({username}) {
     },[])
 
     return (
-        <div>
-            {/* <Navbar /> */}
          <div className="body-container">
          <Sidebar />
          <Feed username={username} /> 
-          {posts.map((post,index)=> (
-                <Post key={index} post={post} />
-
-            ))}
             <Suggestion />
          </div>
-        </div>
     )
 }
 

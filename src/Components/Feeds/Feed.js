@@ -17,8 +17,8 @@ function Feed( {username}) {
 
     useEffect(()=> {
         const fetchpost = async ()=> {
-            const res = username ? await axios.get( URL + "/post/profile/" + username)
-            : await axios.get(URL + "/post/timeline/" + user._id)
+            const res = username ? await axios.get( "/post/profile/" + username)
+            : await axios.get("/post/timeline/" + user._id)
             console.log(res);
             setPost(res.data)
          }  
@@ -29,7 +29,7 @@ function Feed( {username}) {
     return (
         <>
         <div className="feeds">
-           {/* {username === user.username && <Share />} */}
+           {username === user.username && <Share />}
            <ul className="sidebarFriend">
            <div >
            <img className="pimage" src={Me} alt="hello" />
@@ -40,13 +40,14 @@ function Feed( {username}) {
 
         ))}
         </ul>
-        
-            {posts ? posts.map((post,index)=> (
+        {posts && posts.map((post,index)=> (
                 <Post key={index} post={post} />))
-                :
-                <Allfeeds />
+                
 
             } 
+        
+        
+           
 
         
 

@@ -7,16 +7,16 @@ import {Link} from "react-router-dom"
 
 
 export default function Login() { 
-    const email = useRef(); 
+    const username = useRef(); 
   const password = useRef();
   const { isFetching, dispatch } = useContext(AuthContext);  
 
   const clickHandler = async (e) => {
     e.preventDefault();
-    console.log(email);
+    console.log(username);
     console.log(password);
     await LoginCall(
-      { email: email.current.value, password: password.current.value },
+      { username: username.current.value, password: password.current.value },
       dispatch
     );
     
@@ -36,7 +36,7 @@ export default function Login() {
         </div>
         <div className="loginForm">
         <form className="loginInputs" onSubmit={clickHandler}>
-            <input className="loginEmail" type="email" ref={email} placeholder="Enter Your Email" required />
+            <input className="loginEmail" type="email" ref={username} placeholder="Enter Your Email" required />
             <input className="loginPassword" ref={password} type="password" placeholder="Enter Your Password" required />
             {/* <div className="login-btn-container"> */}
             <button type="submit" className="login-btn">{isFetching ? "Loading" : "Log In"}</button>

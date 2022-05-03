@@ -14,7 +14,9 @@ function Post({post}) {
     const [like,setlike] = useState(post.likes.length)
     const [isliked,setisliked] = useState(false)
     const [user,setUser] = useState({})
+    console.log(user);
      const { user:currentUser } = useContext(AuthContext)
+     
     const PF = process.env.REACT_APP_PUBLIC_FOLDER
     console.log(PF);
 
@@ -25,7 +27,7 @@ function Post({post}) {
     useEffect(()=> {
         const fetchUser = async ()=> {
             const res = await axios.get(`/user?userId=${post.userId}`)
-            console.log(res)
+            console.log(res.data)
             setUser(res.data)
          }
          fetchUser();
@@ -52,10 +54,10 @@ function Post({post}) {
           <div className="postContainer">
           <div className="postTop">
               <div className="postTopLeft">
-              <Link to ={`/profile/${user.username}`} >
-              <img className="postImg" src={user.profilePicture ?user.profilePicture :"/assets/person/noAvatar.png"} alt="postpic" />
+              <Link to ={`/profile/${currentUser.username}`} >
+              <img className="postImg" src={currentUser.profilePicture ?currentUser.profilePicture :"/assets/person/noAvatar.png"} alt="postpic" />
               </Link>
-              <span className="postName">{user.username}</span>
+              <span className="postName">{post.username}</span>
               <span className="postTime">Last Seen{format(post.createdAt)}</span>
               {/* <MoreVertIcon  /> */}
               {/* classsName="postIcon" */}
@@ -71,18 +73,6 @@ function Post({post}) {
                   <img onClick={onLike} className="postLike" src="/assets/heart.png" alt="" />
             <span  className="postComment">{like}likes</span>
         </div>
-          </div>
-          <div className="postBottom">
-              <div className="postBottomLeft">
-                  
-              </div>
-              <div className="postBottomRight">
-              
-              
-
-              </div>
-              
-              
           </div>
 
 

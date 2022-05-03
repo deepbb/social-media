@@ -11,7 +11,7 @@ function Allfeeds() {
 
     useEffect(()=> {
         const getAllPosts = async()=> {
-            const res = await axios.get( URL +"/post/")
+            const res = await axios.get(URL + "/post/")
             console.log(res.data);
             setPosts(res.data)
         }
