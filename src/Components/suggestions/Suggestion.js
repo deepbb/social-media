@@ -24,7 +24,7 @@ function Suggestion() {
 
   useEffect(()=> {
     const getAllUsers = async()=> {
-      const res = await axios.get( URL +"/user/users")
+      const res = await axios.get( URL +"api/user/users")
       console.log(res.data);
       setUsers(res.data)
     }
